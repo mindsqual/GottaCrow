@@ -1,0 +1,26 @@
+﻿@using GottaCrowWebUI.Entities
+@model JobSearchActivity
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create</h1>
+
+    @using (Html.BeginForm())        
+    {
+        <div>
+            @Html.LabelFor(m => m.ActivityType)
+            @Html.DropDownListFor(m => m.ActivityType, Html.GetEnumSelectList(typeof(JobSearchActivityType)))
+            
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    }    
+
+</body>
+</html>

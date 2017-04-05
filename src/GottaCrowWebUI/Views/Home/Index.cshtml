@@ -1,0 +1,21 @@
+﻿@model GottaCrowWebUI.ViewModels.HomePageViewModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h3>@Model.CurrentGreeting</h3>
+    <table>
+        @foreach (var activity in Model.JobSearchActivities)
+        {
+            <tr>
+                <td>@activity.Id</td>@*TO-DO: make this a link to deatails view*@
+                <td>@activity.HappenedOn</td>
+                <td>@activity.Contact.Person.FullName</td>
+            </tr>
+
+        }
+    </table>
+</body>
+</html>

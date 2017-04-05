@@ -1,0 +1,14 @@
+﻿@model GottaCrowWebUI.Entities.JobSearchActivity
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search Activity</title>
+</head>
+<body>
+    <h1>@Model.ActivityType</h1>
+    <div>Date: @Model.HappenedOn</div>
+    <div>Person: @Model.Contact.Person.FullName</div>
+    <div>
+        @Html.ActionLink("Home", "Index")
+    </div>
+</body>
+</html>
