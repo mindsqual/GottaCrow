@@ -43,12 +43,13 @@ namespace GottaCrowWebUI.Entities
     {
         public int Id { get; set; }
 
+        [Display(Name ="Activity Type")]
         public JobSearchActivityType ActivityType { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime HappenedOn { get; set; }
 
-        public IContact Contact { get; set; }
+        public Contact Contact { get; set; }
     }
     #endregion
 }

@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using GottaCrowWebUI.Services;
 using Microsoft.AspNet.Routing;
+using GottaCrowWebUI.Entities;
+using Microsoft.Data.Entity;
 
 namespace GottaCrowWebUI
 {
@@ -25,9 +27,13 @@ namespace GottaCrowWebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddEntityFramework()
+                    .AddSqlServer()
+                    .AddDbContext<JobSearchActivityDbContext>(
+                options => options.UseSqlServer(Configuration["database:connection"]));
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IGreeter, Greeter>();
-            services.AddScoped<IJobSearchActivityData, InMemoryJobSearchData>();
+            services.AddScoped<IJobSearchActivityData, SqlJobSearchData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

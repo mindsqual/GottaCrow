@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GottaCrowWebUI.Entities
 {
-    public enum JobSearchPersonType
-    {
-        None,
-        Recruiter,
-        HiringManager,
-        EmployerHumanResources,
-        Employee
-    }
     public interface IPerson
     {
         int Id { get; set; }
         string FirstName { get; set; }
         string LastName { get; set; }
         string FullName { get; }
-        JobSearchPersonType PersonType { get; set; }
 
+        List<IEmail> Emails { get; set; }
+        List<IPhoneNumber> PhoneNumbers { get; set; }
     }
     public class Person : IPerson
     {
+        private List<IEmail> _emails;
+        private List<IPhoneNumber> _phoneNumbers;
+
         public int Id { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -34,6 +29,18 @@ namespace GottaCrowWebUI.Entities
             get { return FirstName + " " + LastName; }
         }
 
-        public JobSearchPersonType PersonType { get; set; }
+        [NotMapped]
+        public List<IEmail> Emails
+        {
+            get { return _emails; }
+            set { _emails = value; }
+        }
+
+        [NotMapped]
+        public List<IPhoneNumber> PhoneNumbers
+        {
+            get { return _phoneNumbers; }
+            set { _phoneNumbers = value; }
+        }
     }
 }

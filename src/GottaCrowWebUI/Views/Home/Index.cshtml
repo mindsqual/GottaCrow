@@ -10,8 +10,11 @@
         @foreach (var activity in Model.JobSearchActivities)
         {
             <tr>
-                <td>@activity.Id</td>@*TO-DO: make this a link to deatails view*@
+                <td>
+                    @Html.ActionLink(activity.Id.ToString(), "Details", new { id = activity.Id })
+                </td>
                 <td>@activity.HappenedOn</td>
+                <td>@activity.ActivityType</td>
                 <td>@activity.Contact.Person.FullName</td>
             </tr>
 

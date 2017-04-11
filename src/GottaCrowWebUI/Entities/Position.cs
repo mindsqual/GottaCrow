@@ -10,15 +10,17 @@ namespace GottaCrowWebUI.Entities
         int Id { get; set; }
         string Title { get; set; }
         string Description { get; set; }
-        IEmployer Employer { get; set; }
+        int EmployerId { get; set; }
         string EmployerTrackingCode { get; set; }
     }
     public class Position : IPosition
     {
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public IEmployer Employer { get; set; }
+        public int EmployerId { get; set; }
+        public virtual IEmployer Employer { get; set; }
         public string EmployerTrackingCode { get; set; }
     }
 }
