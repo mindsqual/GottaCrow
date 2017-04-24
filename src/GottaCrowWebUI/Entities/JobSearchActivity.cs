@@ -1,5 +1,4 @@
-﻿using GottaCrowWebUI.Utilities;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace GottaCrowWebUI.Entities

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GottaCrowWebUI.Utilities
+namespace JobSearch.Common
 {
     public class DateTimeAdapter : IDateTime
     {

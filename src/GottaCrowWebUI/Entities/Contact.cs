@@ -2,17 +2,6 @@
 
 namespace GottaCrowWebUI.Entities
 {
-    public enum JobSearchContactType
-    {
-        None,
-        Acquaintance, //ie: networking/LinkedIn, etc.
-        Recruiter,
-        EmployeeHumanResources,
-        EmployeeManager,
-        EmployeeOther,
-        
-    }
-
     public interface IContact
     {
         int Id { get; set; }
