@@ -7,11 +7,11 @@ namespace GottaCrow.DAL
 {
     public class JobSearchDbContext : DbContext
     {
-        DbSet<JobSearchActivity> Activities { get; set; }
+        public DbSet<JobSearchActivity> Activities { get; set; }
 
-        DbSet<Person> People { get; set; }
+        public DbSet<Person> People { get; set; }
 
-        DbSet<Company> Companies { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
         #region//Context Configuration-Persistence
         /*EF will never know about IsDirty-- it is only meant to be used in the app. Not persisted...*/
