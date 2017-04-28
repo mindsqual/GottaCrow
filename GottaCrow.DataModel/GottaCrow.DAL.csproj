@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomInitializer.cs" />
+    <Compile Include="DataHelpers.cs" />
     <Compile Include="JobSearchDbContext.cs" />
     <Compile Include="Migrations\201704121920423_Initial.cs" />
     <Compile Include="Migrations\201704121920423_Initial.Designer.cs">
@@ -65,6 +67,14 @@
     <Compile Include="Migrations\201704171705377_addTxtFieldsJsActivty.cs" />
     <Compile Include="Migrations\201704171705377_addTxtFieldsJsActivty.Designer.cs">
       <DependentUpon>201704171705377_addTxtFieldsJsActivty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704271347341_PersonRmvCompanyNavProp.cs" />
+    <Compile Include="Migrations\201704271347341_PersonRmvCompanyNavProp.Designer.cs">
+      <DependentUpon>201704271347341_PersonRmvCompanyNavProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704271405314_CoNamePropChange.cs" />
+    <Compile Include="Migrations\201704271405314_CoNamePropChange.Designer.cs">
+      <DependentUpon>201704271405314_CoNamePropChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704171705377_addTxtFieldsJsActivty.resx">
       <DependentUpon>201704171705377_addTxtFieldsJsActivty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704271347341_PersonRmvCompanyNavProp.resx">
+      <DependentUpon>201704271347341_PersonRmvCompanyNavProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704271405314_CoNamePropChange.resx">
+      <DependentUpon>201704271405314_CoNamePropChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

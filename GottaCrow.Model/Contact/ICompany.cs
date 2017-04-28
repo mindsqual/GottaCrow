@@ -9,6 +9,6 @@ namespace JobSearch.Model
     public interface ICompany
     {
         int Id { get; set; }
-        string CompanyName { get; set; }
+        string Name { get; set; }
     }
 }

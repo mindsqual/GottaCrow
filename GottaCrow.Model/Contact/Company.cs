@@ -6,7 +6,7 @@ namespace JobSearch.Model
     public class Company : ICompany, IModificationHistory
     {
         public int Id { get; set; }
-        public string CompanyName { get; set; }
+        public string Name { get; set; }
         public List<Person> Employees { get; set; }
 
         #region//history tracking

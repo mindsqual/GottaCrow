@@ -12,5 +12,14 @@ We really only need a few classes for initial DbContext.
 
 	April 12
 	All of the classes are in NameSpace: JobSearch.Model
-
+	April 26
+	After seeing some of the DDD Plural sight class, I realize that the JobSearchActivity entity is not the correct aggregate root.
+	Therefore, insted of refactoring I am going to refactor considerably.
+	1) Create a Contacts class library
+	2) The aggregate root that I really want is a Position.
+	       Position is an entity and is made up of
+		     - JobDescription
+			 - Employer
+			 - List<JobSearchActivitie>
+			 - List<Contact>
 

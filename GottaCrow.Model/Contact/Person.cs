@@ -9,7 +9,6 @@ namespace JobSearch.Model
         public string LastName { get; set; }
 
         public int CompanyId { get; set; }
-        public Company Company { get; set; }
 
         #region//history tracking
         public DateTime DateModified { get; set; }
